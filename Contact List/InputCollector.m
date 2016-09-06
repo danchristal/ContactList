@@ -16,7 +16,7 @@
     NSLog(@"%@", promptString);
     fgets(inputString, 255, stdin);
     
-    return [NSString stringWithUTF8String:inputString];
+    return [[NSString stringWithUTF8String:inputString] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 
 @end
